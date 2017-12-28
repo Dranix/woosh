@@ -17,5 +17,9 @@ class WelcomeVC: UIViewController {
     
     @IBAction func getStartedBtnTouched(_ sender: Any) {
     }
+    
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue){
+        
+    }
 }
 
