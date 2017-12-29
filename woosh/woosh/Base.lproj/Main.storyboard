@@ -47,7 +47,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="getStartedBtnTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEP-eD-PYw"/>
                                     <segue destination="9AA-zh-h31" kind="show" id="wNz-Td-DF6"/>
                                 </connections>
                             </button>
@@ -137,6 +136,9 @@ the league</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="9AA-zh-h31" eventType="touchUpInside" id="ZND-D0-HuX"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="U2U-LX-VGr">
                                 <rect key="frame" x="60" y="40" width="200" height="67"/>
@@ -188,6 +190,9 @@ the league</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EQO-bc-SQf"/>
                     </view>
+                    <connections>
+                        <segue destination="Psg-kT-xWB" kind="show" identifier="skillVCSegue" id="XTd-RE-4RA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdW-MA-Vv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ht2-ox-oHa" userLabel="Exit" sceneMemberID="exit"/>
