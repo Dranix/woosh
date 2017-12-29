@@ -110,6 +110,9 @@ the league</string>
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="leagueButtonTapped:" destination="9AA-zh-h31" eventType="touchUpInside" id="XQn-on-l2R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkg-Qm-Oql" customClass="BorderButton" customModule="woosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="300" height="40"/>
@@ -118,6 +121,9 @@ the league</string>
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="leagueButtonTapped:" destination="9AA-zh-h31" eventType="touchUpInside" id="29w-Rg-f1C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1w-Cd-Fm8" customClass="BorderButton" customModule="woosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="300" height="40"/>
@@ -126,10 +132,13 @@ the league</string>
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="leagueButtonTapped:" destination="9AA-zh-h31" eventType="touchUpInside" id="4FA-sJ-ht7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-qo-0r3" customClass="BorderButton" customModule="woosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-qo-0r3" customClass="BorderButton" customModule="woosh" customModuleProvider="target">
                                 <rect key="frame" x="10" y="508" width="300" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
@@ -191,6 +200,10 @@ the league</string>
                         <viewLayoutGuide key="safeArea" id="EQO-bc-SQf"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="TOy-qo-0r3" id="7FX-PE-gTe"/>
+                        <outletCollection property="selectBtnCollection" destination="hgK-Yn-dGp" collectionClass="NSMutableArray" id="ehR-QP-Qfi"/>
+                        <outletCollection property="selectBtnCollection" destination="Wkg-Qm-Oql" collectionClass="NSMutableArray" id="alS-Vr-bGE"/>
+                        <outletCollection property="selectBtnCollection" destination="E1w-Cd-Fm8" collectionClass="NSMutableArray" id="N7z-N5-7q5"/>
                         <segue destination="Psg-kT-xWB" kind="show" identifier="skillVCSegue" id="XTd-RE-4RA"/>
                     </connections>
                 </viewController>
@@ -207,9 +220,8 @@ the league</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="vAX-Rk-UXF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="vAX-Rk-UXF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="LSf-FY-cDP">
                                 <rect key="frame" x="15" y="137" width="290" height="40"/>
@@ -260,15 +272,20 @@ the league</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Joo-oy-w58" firstAttribute="bottom" secondItem="tz7-Zq-RgQ" secondAttribute="bottom" constant="20" id="Cyb-2f-xsZ"/>
                             <constraint firstItem="QDa-MM-EuX" firstAttribute="top" secondItem="Joo-oy-w58" secondAttribute="top" constant="20" id="FWN-tT-6ch"/>
                             <constraint firstItem="LSf-FY-cDP" firstAttribute="centerX" secondItem="oKs-fm-Kd6" secondAttribute="centerX" id="Fw7-JG-ND1"/>
+                            <constraint firstItem="vAX-Rk-UXF" firstAttribute="top" secondItem="oKs-fm-Kd6" secondAttribute="top" id="HO6-MH-TCD"/>
                             <constraint firstItem="LSf-FY-cDP" firstAttribute="top" secondItem="QDa-MM-EuX" secondAttribute="bottom" constant="30" id="HjA-iK-EoM"/>
                             <constraint firstItem="LSf-FY-cDP" firstAttribute="leading" secondItem="Joo-oy-w58" secondAttribute="leading" constant="15" id="K9B-q0-BVz"/>
+                            <constraint firstItem="Joo-oy-w58" firstAttribute="trailing" secondItem="tz7-Zq-RgQ" secondAttribute="trailing" constant="10" id="KEY-M5-VJQ"/>
                             <constraint firstItem="Joo-oy-w58" firstAttribute="trailing" secondItem="LSf-FY-cDP" secondAttribute="trailing" constant="15" id="LWE-fk-D2F"/>
-                            <constraint firstItem="Joo-oy-w58" firstAttribute="trailing" secondItem="tz7-Zq-RgQ" secondAttribute="trailing" constant="10" id="MtW-Rc-eWx"/>
                             <constraint firstItem="tz7-Zq-RgQ" firstAttribute="top" secondItem="LSf-FY-cDP" secondAttribute="bottom" constant="331" id="QIr-E5-4B1"/>
-                            <constraint firstItem="tz7-Zq-RgQ" firstAttribute="leading" secondItem="Joo-oy-w58" secondAttribute="leading" constant="10" id="Rvf-yZ-Xbi"/>
+                            <constraint firstItem="tz7-Zq-RgQ" firstAttribute="leading" secondItem="Joo-oy-w58" secondAttribute="leading" constant="10" id="aR1-KB-WMh"/>
+                            <constraint firstItem="vAX-Rk-UXF" firstAttribute="trailing" secondItem="Joo-oy-w58" secondAttribute="trailing" id="df7-E4-uv3"/>
+                            <constraint firstItem="vAX-Rk-UXF" firstAttribute="bottom" secondItem="Joo-oy-w58" secondAttribute="bottom" id="iFJ-m6-PKb"/>
                             <constraint firstItem="QDa-MM-EuX" firstAttribute="centerX" secondItem="oKs-fm-Kd6" secondAttribute="centerX" id="r1C-kj-uR8"/>
+                            <constraint firstItem="vAX-Rk-UXF" firstAttribute="leading" secondItem="Joo-oy-w58" secondAttribute="leading" id="xWR-Wx-JRL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Joo-oy-w58"/>
                     </view>
